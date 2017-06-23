@@ -167,7 +167,6 @@ function login() {
 login()
 
 
-
 // 轮播图
  /*
   1. 设置触发事件
@@ -180,16 +179,20 @@ var extend = function(o1,o2) {
   for(var i in o2) if (typeof o1[i] == 'undefined') {
     o1[i]=o2[i]
   }
-  return o1
+  return o1;
 }
 
 var $ = function (select) {
   return [].slice.call(document.querySelectorAll(select))
 }
 // 下标指针
+
 var cursors = $('.carousel-cursors .cursors');
-var prev = $('.carousel-cursors .prev');
-var next = $('.carousel-cursors .next');
+var prev = $('.prev')[0];
+var next = $('.next')[0];
+console.log(next)
+var inner =document.querySelector('.carousel-inner');
+
 // 触发事件
 cursors.forEach(function(cursors,index) {
   cursors.addEventListener('click',function() {
@@ -205,67 +208,71 @@ next.addEventListener('click',function() {
   slider.next();
 })
 
-setInterval(function(){
-  
-  // 下一页
-  // slider.next();
 
-},3000)
 
-slider.nav(1);
+var slider = new Slider;
+
+/* 鼠标滑过事件 */
+
+
 // 初始化事件
-
-var slider = new Slider
 
 
 
 // 获取节点
 function Slider() {
   // 获取图片
-  this.item = $('.carousel-inner .item') 
+  this.item = $('.carousel-inner .item')
   this.pageIndex = this.pageIndex || 0;
+  this.itemlength = this.item.length;
+  /* 自动轮播 */
+  this.time = setInterval(function(){slider.next();},5000)
  }
 
 // 原型扩展
 
-extend(Slider.prototype, {
+extend( Slider.prototype,{
   // 指定跳转页面
-  nav: function(index) {
-  item[index].className = 'active'
-  this.step(index)
-  this._calcSlide()
-  }
+  nav: function(pageIndex) {
+    this.pageIndex = pageIndex;
+    this.move(this.pageIndex);
+  },
 
   // 下一页
   next: function() {
-    this.step(1)
-  }
+    this.pageIndex++;
+    if( this.pageIndex >= this.itemlength ) {
+      this.pageIndex = 0;
+      inner.style.left = 0 + 'px';
+    }
+    this.move(this.pageIndex);
+  },
 
   // 上一页
   prev: function() {
-    this.step(-1)
-  }
-
-  step: function(offset) {
-    this.pageIndex = offset
-    var step = this
-  }
-  
-  _calcSlide: function() {
-
-  }
-  // 实现渐变函数
-  fadeout: function(element) {
-    var val = 0;
-    var change = function() {
-      setOpacity(element,val)
-      val += 0.1;
+    this.pageIndex--;
+    if( this.pageIndex < 0 ) {
+      this.pageIndex = 2;
+      inner.style.left = -(this.itemlength * 1349) + 'px';
     }
-    var intervalID = setInterval(change,100)
-  // 改变图片透明度的函数
-  setOpacity: function (element,val) {    //兼容测试IE
-    element.filters?element.style.filter ='alpha(opacity='+100*value+')' : element.style.opacity = val;     
-      }
+    this.move(this.pageIndex);
+  },
+
+  move: function(pageIndex) {
+    // this.item[this.pageIndex].className = 'item active';
+    inner.style.left = -(this.pageIndex*1349)+'px';
+    for (var i = 0; i < cursors.length; i++) {
+      cursors[i].className='cursors';
+      this.item[i].className='item';
+    }
+    cursors[this.pageIndex].className = 'active';
+    this.item[pageIndex].className = 'item active';
+    this.item[this.pageIndex].onmousemove = function() {
+      clearInterval(this.time)
+    }
+    this.item[this.pageIndex].onmouseout = function() {
+       Slider();
+    }
   }
 
-  }
+})

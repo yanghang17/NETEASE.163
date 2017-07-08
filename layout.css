@@ -1,0 +1,829 @@
+/* 头部设置 */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.f-fl{float: left;}
+.f-fr{float: right;}
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+.f-db{display:block;}
+.f-dn{display: none;}
+.f-oh{overflow:hidden;}
+.f-pr{position:relative;}
+.f-csp{cursor: pointer;}
+body .hide {
+	display: none;
+} 
+/* 广告设置 */
+.m-topnav {
+	width: 100%;
+	height: 36px;
+	background: #f3f3f3;
+}
+.m-topnav p {
+	display: inline-block;
+	line-height: 36px;
+}
+.m-topnav .cont {
+	width: auto;
+	margin: 0 auto;
+	padding: 0 156px;
+}
+.m-topnav .close {
+	height: 12px;
+	margin: 12px 0;
+	line-height: 12px;
+	text-indent: 15px;
+	background: url(../images/spirit.png) no-repeat -284px -25px;
+}
+/* 导航开始 */
+.m-navwrap {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 32px 122px 32px 156px;
+}
+.m-navwrap .m-logo p {
+	font-size: 22px;
+	width: 240px;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 84px;
+	background: url(../images/spirit.png) no-repeat -223px 0;
+}
+.m-navwrap .m-login {
+	margin-left: 30px;
+	font: 12px/21px SimSun;
+}
+/* 关注按钮 */
+
+.m-navwrap .m-login .status {
+	width: 54px;
+	height: 21px;
+	vertical-align: middle;
+	padding-left: 20px;
+	border: 0;
+	border-radius: 2px;
+	background: #21a557 url(../images/spirit.png) -36px 0px;
+	color: #fff;
+}
+.m-navwrap .m-login .status:hover {
+	background-color: #2fb556;
+}
+
+
+.m-navwrap .m-login .fans{
+	margin-left: 14px;
+	color: #666;
+}
+
+.m-navwrap .m-login .instatus {
+	float: left;
+	text-align: left;
+	padding-left: 23px;
+	background-color: #fff;
+	color: #333;
+	height: 21px;
+	width: 106px;
+	border-radius: 2px;
+	border: 1px solid #efefef;
+	font-size: 14px;
+	background: url(../images/spirit.png) no-repeat -103px -1px;
+}
+.m-navwrap .m-login .cancel {
+	position: absolute;
+	top: 4px;
+	left: 69px;
+	font: 12px/12px SimSun;
+	border-left: 1px solid #cccccc;
+	padding-left: 4px;
+	color: #999;
+}
+.m-navwrap .m-login .cancel:hover {
+	text-decoration: underline;
+	color: #39a030; 
+}
+
+/* 弹窗设置 */
+.g-hd .m-popuplog {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	display: none;
+}
+.g-hd .m-popuplog .bg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+.g-hd .popup {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 387px;
+	height: 288px;
+	margin: -144px 0 0 -193px; 
+	z-index: 99;
+	background: #fff;
+}
+/* 关闭按钮 */
+.g-hd .popup .close {
+	width: 20px;
+	height: 20px;
+	margin-left: 367px;
+	background: url(../images/spirit.png) no-repeat -18px 0;
+	cursor: pointer;
+} 
+.g-hd .popup h3 {
+	padding: 0 0 10px 38px;
+	font: bold 18px/38px 'Microsoft YaHei';
+}
+.g-hd .form {
+	width: 293px;
+	height: 43px;
+	margin: 0 0 30px 40px;
+}
+/* 弹窗输入框 */
+.g-hd .form input {
+	display: block;
+	width: 293px;
+	height: 43px;
+	background: #fafafa;
+	border: 1px solid #dfdfdf;
+	box-shadow: inset 1px 1px 2px 1px #f1f1f1;
+	font: 16px/43px 'Microsoft YaHei';
+	text-indent: 10px;
+	color: #000;
+}
+.g-hd .form label {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	font: 16px/28px 'Microsoft YaHei';
+	color: #cccccc;
+}
+
+/* 按钮设计 */
+.g-hd .popup .submit {
+	display: block;
+	width: 293px;
+	height: 46px;
+	border: none;
+	box-shadow: 1px 1px 0 1px #d5e3da;
+	margin: 0 0 30px 40px;
+	background: url(../images/spirit.png) no-repeat 0 -37px;
+}
+
+
+
+/* 右边导航设置 */
+
+.g-hd .m-nav {
+	vertical-align: top;
+}
+.g-hd .m-nav a {
+	float: left;
+	margin-right: 56px;
+	font-size: 16px;
+	color: #666;
+}
+.g-hd .m-nav a:hover {
+	color: #39a030;
+}
+.m-nav .search {
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	background: url(../images/spirit.png) no-repeat;
+}
+.m-nav .search:hover {
+	background-position: 0 -18px;
+}
+
+.m-nav .search-cont {
+	height: 23px;
+	/*width: 188px;*/
+	border-radius: 6px;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	outline: 0;
+	border: 0;
+	margin: -4px 0 ;
+	display: none;
+}
+
+
+
+/* 网页内容 */
+.g-bd {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* 轮播图 */
+.m-bner {
+	position: relative;
+	height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.m-bner .carousel-inner {
+    height: 100%;
+}
+.m-bner .carousel-inner .item {
+	float: left;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: Alpha(opacity=0);
+    position: absolute;
+	top: 0;
+	left: 0; 
+
+}
+.m-bner .carousel-inner .active {
+	position: relative;
+	opacity: 1;
+	transition-property: opacity;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:500ms;
+	transition-property: opacity;
+	transition-duration: 500ms;
+	-moz-transition-property: opacity; /* Firefox 4 */
+	-moz-transition-duration: 500ms; /* Firefox 4 */
+	-webkit-transition-property: opacity; /* Safari and Chrome */
+	-webkit-transition-duration: 500ms; /* Safari and Chrome */
+	-o-transition-property: opacity; /* Opera */
+	-o-transition-duration: 500ms; /* Opera */
+}
+
+.m-bner .carousel-inner img{
+	float: left;
+    width: 100%;
+
+}
+
+/* 图标导航 */
+.g-bd .carousel-cursors {
+	width: 62px;
+	height: 10px;
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	margin-left: -31px;
+	z-index: 2;
+}
+.g-bd .carousel-cursors li {
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	margin-left: 10px;
+	background-color: #fff;
+	cursor: pointer;
+	opacity: 0.6;
+}
+.g-bd .carousel-cursors .active {
+	background-color: #5d5d5d;
+	opacity: 0.6;
+}
+.m-bner .prev {
+	font-size: 60px;
+	position: absolute;
+	top: 45%;
+	left: 45px;
+	color: #000;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.m-bner .next {
+	font-size: 60px;
+	position: absolute;
+	top: 45%;
+	right: 45px;
+	color: #000;
+	opacity: 0.5;
+	cursor: pointer;
+}
+/* 产品介绍 */
+.m-product {
+	height: 235px;
+	width: 90%;
+	margin: 60px auto 0;
+
+} 
+.m-product .cont {
+	width: 25%;
+	height: 100%;
+	margin:0 4%;
+}
+.m-product .cont h3 {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: 15px;
+	line-height: 22px;
+	color: #333;
+} 
+.m-product .icon {
+	width: 80px;
+	height: 229px;
+	margin: 8px 20px 0 0;
+}
+
+.m-product .icon1 {
+	background: url(../images/spirit.png) no-repeat 0 -83px;
+}
+.m-product .icon2 {
+	background: url(../images/spirit.png) no-repeat -80px -83px;
+}
+.m-product .icon3 {
+	background: url(../images/spirit.png) no-repeat -160px -83px;
+}
+.m-product .team p {
+	height: 120px;
+	width: 315px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #666; 
+	text-align: justify;	
+}
+.m-product .team a {
+	font-size: 14px;
+	color: #39a030;
+}
+.m-product .team a:hover{
+	text-decoration: underline;
+}
+/* 工作地点图片 */
+.g-bd .m-workplace {
+	position: relative;
+	height: 220px;
+	width: 100%;
+	overflow: hidden;
+} 
+.m-workplace .box {
+	width: 3200px;
+	height: 220px;
+	position: absolute;
+	background-color: #000;
+}
+
+.m-workplace .box:hover li {
+	opacity: 0.5;
+}
+.m-workplace .box li:hover {
+	opacity: 1;
+}
+.m-workplace li {
+	width: 320px;
+	height: 220px;
+}
+
+/* 课程内容 */
+.g-bot  {
+	width: 89%;
+	min-height: 1552px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.g-bot .g-mn {
+	width: 78%;
+}
+.g-bot .m-tabhd {
+	width: 400px;
+	height: 50px;
+	margin: 0 0 20px 11px;
+	text-align: center;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	font: 20px/50px 'Microsoft YaHei';
+	color: #666;
+}
+.g-bot .m-tabhd .btn {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 50px;
+	border-radius: 4px;
+	white-space: nowrap;
+}
+.g-bot .m-tabhd .active {
+	background-color: #39a030;
+	color: #fff;
+}
+
+/* 课表内容 */
+.g-bot .g-content .m-team {
+	position: relative;
+	float: left;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	margin: 9px;
+	padding-bottom: 6px;
+	width: 216px;
+	/*overflow: hidden;*/
+}
+.g-bot .g-content .m-design {
+	display: block;
+}
+.g-bot .g-content .m-language {
+	display: none;
+}
+.g-bot .m-team:hover .showmes2 {
+	display: block;
+	color: #999999;
+}
+
+.g-bot .m-team>img {
+	width: 213px;
+	height: 124px;
+	margin: 1px 1px 10px 2px;
+}
+/* 课程名字 */
+.g-bot .m-team>.name {
+	color: #000;
+	width: 213px;
+	font-family: 'Microsoft Yahei';
+	padding-left: 4px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 提供者 */
+.g-bot .m-team>.provider {
+	color: #999999;
+	margin: 10px 0 11px 5px;
+}
+.g-bot .m-team>.learnerCount {
+	color: #999999;
+	padding: 0 4px 0 18px;
+	border: 1px solid #dddddd;
+	border-radius: 2px;
+	background: url(../images/spirit.png) no-repeat -33px -22px;
+	font-size: 10px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.g-bot .m-team .price {
+	display: block;
+	margin: 10px 0 0 6px;
+	color: #ff3f00;
+}
+
+/* design-showMoreMessige */
+.g-bot .m-team .showmes2 {
+	border: 1px solid #dcdcdc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	z-index: 3;
+	background-color: #fff;
+	padding: 10px;
+	display: none;
+}
+.m-team .showmes2 img {
+	float: left;
+	width: 223px;
+	/*display: inline-block;*/
+	height: 124px;
+	margin-bottom: 4px;
+}
+
+.m-team .showmes2 .name {
+  font: 16px/20px 'Microsoft YaHei';
+  margin: 0 0 18px 236px;
+  color: #333333;
+}
+
+.m-team .showmes2 .learnerCount {
+  margin: 0 0 0 8px;
+  background: url(../images/spirit.png) no-repeat -33px -22px;
+  padding-left: 18px;
+}
+
+.m-team .show2-detail {
+  margin-top: 10px;
+}
+
+.m-team .show2-detail span {
+  margin: 6px 0 0 236px; 
+  display: block;
+  font-size: 12px;
+}
+
+.m-team .showmes2 .description {
+	clear: both;
+	width: 418px;
+	font: 12px/18px 'Microsoft YaHei';
+	/*text-align: middle;*/
+}	
+
+/* 页面导航数字 */
+.g-bot .g-mn .m-nextpage {
+	float: right;
+	height: 30px;
+	width: 100%;
+	margin: 15px 11px 90px 0;
+	display: block;
+	line-height: 20px;
+}
+.g-mn .m-nextpage ul {
+	float: right;
+}
+.g-mn .m-nextpage li {
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+.g-mn .m-nextpage li:hover a{
+	background-color: #9dd8b1;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+.g-mn .m-nextpage .prev,.g-mn .m-nextpage .next {
+	background-color: #9dd8b1;
+	width: 30px;
+	height: 20px;
+	/*opacity: 0.5;*/
+	text-align: center;
+	cursor: pointer;
+	
+}
+
+.m-nextpage .prev span , .m-nextpage .next span {
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.g-bot .m-nextpage .active {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	display: inline-block;
+	color: #9dd8b1;
+}
+/* 右边栏设置 */
+.g-bot .m-sd {
+	width: 225px;
+	height: 100%;
+	margin-left: 6px;
+} 
+
+/* 	机构介绍 */
+.g-bot .m-sd .m-video {
+	background-color: #fff;
+	box-shadow: 1px 1px 1px #dcdcdc;
+}
+
+.m-sd .m-video h3 {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 19px 0 19px 19px;
+	font-size: 16px;
+	margin: 19px 0 20px 0; 
+}
+
+.m-sd .m-video P {
+	font-size: 14px;
+	padding: 0 0 8px 19px;
+	margin: 
+}
+.m-sd .m-video img {
+	height: 109px;
+	/*width: 180px;*/
+	margin: 0 0 19px 19px;
+	cursor: pointer;
+}
+
+/* 弹窗视频 */
+.g-bot .m-sd .videopop {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+
+}
+
+.m-sd .videopop .bg {
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+}
+.m-sd .videopop .pop {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 570px;
+	width: 950px;
+	margin: -285px 0 0 -475px;
+	background-color: #fff;
+	padding: 25px;
+
+}
+.m-sd .pop .close {  
+	width: 20px;
+	height: 20px; 
+	background: url(../images/spirit.png) no-repeat -18px 0;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.m-sd .pop p {
+	font-size: 16px;
+	margin: 0 0 15px 35px;
+}
+.m-sd .pop video {
+	width: 100%;
+	height: 90%;
+	cursor: pointer;
+} 
+
+/* 最热排行 */
+.g-bot .m-sd .m-list {
+	margin-top: 20px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px #dcdcdc;
+	/*overflow: hidden;*/
+	/*position: relative;*/
+}
+.m-sd .m-list h3 {
+	padding: 19px 0 19px 19px;
+	font-size: 16px;
+	border-bottom: 1px solid #dcdcdc; 
+}
+
+.m-sd .m-list .leanCount {
+	float: left;
+
+}
+.m-sd .m-list div {
+	height: 719px;
+	overflow: hidden;
+}
+
+.m-sd .m-list .list-cont {
+	padding: 0 10px 10px 10px;
+	height: 1000px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.m-sd .m-list li {
+	overflow: hidden;
+	height: 50px;
+	margin: 20px 0 20px 10px;
+}
+
+
+
+.m-sd .m-list img {
+	height: 50px;
+	width: 50px;
+	float: left;
+	vertical-align: top; 
+	margin-right: 12px;
+}
+
+.m-sd .m-list h4 {
+	font-size: 14px;
+	margin-bottom: 12px;
+	font-weight: lighter;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	cursor: Default;
+}
+.m-sd .m-list .learnCount {
+	background: url(../images/spirit.png) no-repeat -37px -23px;
+	padding-left: 15px;
+	cursor: Default;
+}
+
+/* 网页底部 */
+.g-ft {
+	background-color: #2c3339;
+}
+.g-ft .jyb-foot{
+	width: 90%;
+	height: 260px;
+	margin: 0 auto;
+	color: #fff;
+}
+.g-ft .jyb-foot .safety {
+	padding: 80px 0 50px 30px;
+}
+.g-ft .m-logo {
+	margin-bottom: 20px;
+}
+.g-ft .m-logo p {
+	font-size: 22px;
+    width: 240px;
+    height: 26px;
+    color: #39a030;
+    line-height: 26px;
+    padding-left: 84px;
+    background: url(../images/spirit.png) no-repeat -223px 0;
+}
+
+.g-ft .safety-cont p {
+	margin-top: 10px;
+}
+
+.g-ft .jyb-foot .information {
+	padding: 80px 80px 50px 0;
+	/*height: 100px;*/
+}
+
+.g-ft .jyb-foot .footer-link {
+	float: left;
+	margin-right: 70px;
+}
+
+
+.g-ft .footer-link a {
+	color: #fff;
+	display: block;
+	margin-top: 10px;
+}
+
+.g-ft .footer-link .fllow-weibo {
+	height: 15px;
+	width: 53px;
+	background: url(../images/spirit.png) no-repeat -169px -19px;
+}
+
+
+
+
+@media screen and (max-width: 1205px) {
+	.g-bot .m-sd {
+		margin-right: 0;
+		float: left;
+	}
+    .g-bot .g-mn {
+    	width: 66%;
+    	margin-left: 43px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+   /* 广告 */
+	.m-topnav .cont {
+		padding: 0 41px;
+	}
+	.m-navwrap {	
+    	padding: 15px 12px 15px 40px;
+	}
+	.g-hd .m-nav a {
+		margin-right: 12px;
+    	font-size: 16px;
+	}
+	/* 产品介绍 */
+	.m-product {
+		height: 208px;
+	}
+	.m-product .icon {
+		display: none;
+	}
+	.m-product .team p {
+		width: 177px;
+	}
+		
+    /* 工作地点轮播 */
+    .g-bd .m-workplace {
+    	height: 171px;
+    }
+    .g-bot .m-sd {
+    	width: 201px;
+    	margin-right: 0;
+    }
+    .g-bot .g-mn {
+    	margin-left: 10px;
+    }
+    .g-bot .g-content .m-team {
+    	margin: 2px;
+
+    }
+	.m-sd .m-video img {
+		height: 97px;
+	}
+
+}
